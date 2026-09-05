@@ -1,0 +1,8 @@
+teddan-search-pickers:
+  forum:
+    date:
+      toggle: 选择日期或范围
+    tag:
+      loading: 正在加载标签…
+      filter_placeholder: 筛选标签…
+      no_matches: 没有匹配的标签

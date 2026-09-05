@@ -1,0 +1,44 @@
+{
+  "name": "teddan/search-pickers",
+  "description": "Click-to-pick date-range and tag filters in the Flarum search dropdown, collapsed by default.",
+  "keywords": [
+    "flarum",
+    "search",
+    "gambit",
+    "date",
+    "tags",
+    "filter"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "teddan"
+    },
+    {
+      "name": "Annonny",
+      "role": "Original Date Filter extension"
+    }
+  ],
+  "homepage": "https://github.com/teddan/flarum-search-pickers",
+  "support": {
+    "issues": "https://github.com/teddan/flarum-search-pickers/issues",
+    "source": "https://github.com/teddan/flarum-search-pickers"
+  },
+  "require": {
+    "flarum/core": "^2.0"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Search Pickers",
+      "icon": {
+        "name": "fas fa-calendar-alt",
+        "backgroundColor": "#ffc4ab",
+        "color": "#fff"
+      },
+      "optional-dependencies": [
+        "flarum/tags"
+      ]
+    }
+  }
+}

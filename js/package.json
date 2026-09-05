@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "@teddan/search-pickers",
+  "prettier": "@flarum/prettier-config",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "format": "prettier --write src",
+    "format-check": "prettier --check src"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.9"
+  },
+  "devDependencies": {
+    "@flarum/prettier-config": "^1.0.0",
+    "@types/node": "^18.19.0",
+    "flarum-tsconfig": "^2.0.0",
+    "flarum-webpack-config": "^3.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

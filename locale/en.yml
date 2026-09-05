@@ -1,0 +1,8 @@
+teddan-search-pickers:
+  forum:
+    date:
+      toggle: Pick a date or range
+    tag:
+      loading: Loading tags…
+      filter_placeholder: Filter tags…
+      no_matches: No matching tags

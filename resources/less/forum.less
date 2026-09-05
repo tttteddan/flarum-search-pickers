@@ -1,0 +1,142 @@
+@import (inline) 'flatpickr.min.css';
+
+// flatpickr renders the calendar into <body> (`appendTo`) so it never gets
+// clipped by the search dropdown's own scroll container; just make sure it
+// sits above the modal (--zindex-modal is 1050).
+.flatpickr-calendar {
+  z-index: 1060;
+}
+
+// ---------------------------------------------------------------------------
+// Collapsible 筛选项 list (searchFilterCollapse.ts)
+// ---------------------------------------------------------------------------
+.SearchModal-options {
+  > .Dropdown-header {
+    // Keep the toggle icon on the same line as the label.
+    display: flex;
+    align-items: center;
+  }
+
+  .SearchFilterCollapse-toggle {
+    margin-left: 6px;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:not(.is-expanded) {
+    .SearchFilterCollapse-toggle {
+      transform: rotate(180deg); // caret-up -> caret-down when collapsed
+    }
+
+    // Collapsed: hide every option row, keep only the header.
+    > li:not(.Dropdown-header) {
+      display: none !important;
+    }
+  }
+
+  // A picker is showing: the list is force-expanded, so the toggle would be a
+  // dead control.
+  &.has-picker .SearchFilterCollapse-toggle {
+    display: none;
+  }
+}
+
+.SearchGambitPicker {
+  &-loading,
+  &-empty {
+    color: var(--muted-color);
+  }
+
+  // ---- created: -----------------------------------------------------------
+  &--date {
+    padding: 4px 8px;
+  }
+
+  // flatpickr reads its value from here; the query string is what the user
+  // actually reads back, so this never needs to be visible.
+  &-dateValue {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &-dateToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--control-bg);
+    }
+
+    .icon {
+      color: var(--muted-color);
+    }
+  }
+
+  // ---- tag: ---------------------------------------------------------------
+  &--tag {
+    padding: 4px 8px;
+  }
+
+  &-tagFilter {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  // ~8 rows, then scroll. Keeps the full tag list reachable without letting
+  // the dropdown grow without bound.
+  &-tagList {
+    max-height: 272px; // ~8 rows
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  &-tagRow {
+    display: block;
+    width: 100%;
+    padding: 5px 8px;
+    border: 0;
+    border-radius: var(--border-radius);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--control-bg);
+    }
+  }
+
+  &-tagLabel {
+    display: inline-flex;
+    max-width: 100%;
+
+    &.TagLabel--child {
+      margin-left: 12px;
+    }
+  }
+
+  &-empty {
+    padding: 8px;
+  }
+}
