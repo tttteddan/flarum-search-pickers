@@ -53,13 +53,13 @@ languages are welcome.
 ## Links
 
 - [Packagist](https://packagist.org/packages/teddan/search-pickers)
-- [GitHub](https://github.com/teddan/flarum-search-pickers)
+- [GitHub](https://github.com/tttteddan/flarum-search-pickers)
 - [Discuss](https://discuss.flarum.org/)
-- [Report an issue](https://github.com/teddan/flarum-search-pickers/issues)
+- [Report an issue](https://github.com/tttteddan/flarum-search-pickers/issues)
 
 ## Credits
 
-- [teddan](https://github.com/teddan) — Flarum 2.0 rewrite and the tag /
+- [teddan](https://github.com/tttteddan) — Flarum 2.0 rewrite and the tag /
   collapse features
 - [Annonny](https://discuss.flarum.org/u/Annonny) — the original Date Filter
   extension
